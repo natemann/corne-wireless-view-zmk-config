@@ -36,22 +36,8 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;
 )
 
-// This syntax is incorrect. 
-// The bindings argument should group both options together within a single set of angle brackets, separated by a comma.
-// Each parameter should be separated by a semicolon, not a comma.
-// Here is the corrected syntax:
-
-// ZMK_HOLD_TAP(lt_num,
-//     bindings = <&mo>, <&kp TAB>;
-//     flavor = "balanced";
-//     tapping-term-ms = <200>;
-//     quick-tap-ms = <QUICK_TAP_MS>;
-// )
-
-Alternatively, the "bindings" should often be in a single bracket like this, depending on ZMK version:
-
 ZMK_HOLD_TAP(lt_num,
-    bindings = <&mo &kp>;
+    bindings = <&mo>, <&kp>;
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <175>;
